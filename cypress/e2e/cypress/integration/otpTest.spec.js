@@ -1,9 +1,9 @@
 describe('OTP Login Automation with Resend API', () => {
     it('should request a new OTP and log in', () => {
-      cy.visit('https://yourwebsite.com/login');
+      cy.visit('https://resend.com/emails');
   
-      cy.get('input[name="username"]').type('your_username');
-      cy.get('input[name="password"]').type('your_password');
+      cy.get('input[name="email"]').type('your_apple@iperformapp.come');
+      cy.get('input[name="password"]').type('PAssword');
       cy.get('button[type="submit"]').click();
   
       cy.get('input[name="otp"]').should('be.visible');
@@ -13,7 +13,7 @@ describe('OTP Login Automation with Resend API', () => {
       cy.task('fetchOtpFromResend').then((otp) => {
         cy.get('input[name="otp"]').type(otp);  // Enter the OTP
         cy.get('button[type="submit"]').click();  // Submit the form
-        cy.url().should('eq', 'https://yourwebsite.com/dashboard');  // Check for login success
+        cy.url().should('eq', 'https://resend.com/emails');  // Check for login success
       });
     });
   });
