@@ -3,10 +3,10 @@ name: Cypress Tests
 on:
   push:
     branches:
-      - main # or the branch you'd like to trigger on
+      - master # or the branch you'd like to trigger on
   pull_request:
     branches:
-      - main # or the branch you'd like to trigger on
+      - master # or the branch you'd like to trigger on
 
 jobs:
   cypress:
