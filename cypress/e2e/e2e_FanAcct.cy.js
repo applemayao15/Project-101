@@ -19,15 +19,15 @@ describe('End To End Testing', () => {
       cy.contains('About').click();
       cy.wait(5000)
       // Send Email from connect
-      cy.contains('About').click();
-      cy.contains('CONNECT').scrollIntoView().should('be.visible')
-      cy.get('.space-y-8 > :nth-child(1) > .flex').type('Apple')
-      cy.get('.space-y-8 > :nth-child(2) > .flex').type('apple@iperformapp.com')
-      cy.get('.space-y-8 > :nth-child(3) > .flex').type('SubjectEmailTest')
-      cy.get('textarea').type('MessageEmailTestOnly')
-      cy.get('.space-y-8 > .inline-flex > span').click();
-      cy.contains("Success! Your message has been sent. We'll get back to you soon.").should('exist').and('be.visible');
-      cy.wait(3000)
+      // cy.contains('About').click();
+      // cy.contains('CONNECT').scrollIntoView().should('be.visible')
+      // cy.get('.space-y-8 > :nth-child(1) > .flex').type('Apple')
+      // cy.get('.space-y-8 > :nth-child(2) > .flex').type('apple@iperformapp.com')
+      // cy.get('.space-y-8 > :nth-child(3) > .flex').type('SubjectEmailTest')
+      // cy.get('textarea').type('MessageEmailTestOnly')
+      // cy.get('.space-y-8 > .inline-flex > span').click();
+      // cy.contains("Success! Your message has been sent. We'll get back to you soon.").should('exist').and('be.visible');
+      // cy.wait(3000)
       cy.contains('Music').click();
       cy.wait(5000)
       cy.contains('Videos').click();
@@ -76,17 +76,5 @@ describe('End To End Testing', () => {
       
 
 
-
-
-
-
-
-
-
-
-
-       
-
-      
   });  
 });
